@@ -35,6 +35,7 @@ class BootStrap {
           doctorEmail: "s.macdonald@myemail.com",
           password: "secret222",
           doctorOffice: "D-9888",
+          doctorPhone: "0114 230 222 5555",
           bio: "orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
           ).save()
 
@@ -45,6 +46,7 @@ class BootStrap {
           doctorEmail: "B.Doctor@myemail.com",
           password: "superSecret222",
           doctorOffice: "D-9889",
+          doctorPhone: "0114 230 222 2552",
           bio: "orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
           ).save()
 
@@ -76,7 +78,7 @@ class BootStrap {
           recepEmail: "r.kingston@email.com",
           recepUsername: "rking",
           recepPassword: "secret2019",
-          recepTelephone: "0114 222 4445"
+          recepPhone: "0114 222 4445"
           ).save()
 
           def recepLaurenEdwards = new Receptionist(
@@ -84,7 +86,7 @@ class BootStrap {
             recepEmail: "l.edwards@email.com",
             recepUsername: "ledwards",
             recepPassword: "password123",
-            recepTelephone: "0114 222 4447"
+            recepPhone: "0114 222 4447"
             ).save()
 
           // Nurse Domain Class Instances
