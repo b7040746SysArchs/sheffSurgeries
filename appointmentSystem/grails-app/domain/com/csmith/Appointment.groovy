@@ -10,7 +10,7 @@ class Appointment {
     static constraints = {
       appDate blank:false, nullable: false
       appTime blank:false, nullable: false
-      appDruation blank:false, nullable: false, max:60
+      appDuration blank:false, nullable: false, max:60
       roomNumber blank:false, nullable: false
     }
 }
