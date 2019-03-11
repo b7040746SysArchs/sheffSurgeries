@@ -6,7 +6,7 @@ class Appointment {
   String appTime;
   int appDuration;
   String roomNumber;
-  Patient appPatient;
+  Patient patient;
 
   static hasMany = [surgeries: Surgery]
 
@@ -15,6 +15,6 @@ class Appointment {
       appTime blank:false, nullable: false
       appDuration blank:false, nullable: false, max:60
       roomNumber blank:false, nullable: false
-      appPatient blank: false, nullable: false
+      patient blank: false, nullable: false
     }
 }

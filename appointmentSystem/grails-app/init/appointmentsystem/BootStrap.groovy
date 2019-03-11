@@ -67,7 +67,7 @@ class BootStrap {
             patientAddress: "14 Two Way Street, Eckington",
             patientResidence: "Sheffield",
             patientDob: new Date("09/09/1980"),
-            patientID: "E667SG",
+            patientID: "E337SG",
             dateRegistered: new Date("05/11/1985"),
             patientPhone: "0114 222 5555"
             ).save()
@@ -99,10 +99,10 @@ class BootStrap {
             nursePhone: "0114 222 4433"
             ).save()
 
-            def nurseJackDalery = new Nurse(
-              nurseName: "Jack Daley",
+            def nurseGeorgeTimmins = new Nurse(
+              nurseName: "George Timmins",
               qualifications: "Registered General Nurse",
-              nurseEmail: "j.daley@myemail.com",
+              nurseEmail: "G.Timmins@myemail.com",
               nurseOffice: "B-422",
               nursePhone: "0114 222 4422"
               ).save()
@@ -113,14 +113,16 @@ class BootStrap {
             appDate: new Date("07/08/2019"),
             appTime: "3:00pm",
             appDuration: 30,
-            roomNumber: "A-1111"
+            roomNumber: "A-1111",
+            patient: patJackReacher
             ).save()
 
             def appointment2 = new Appointment(
               appDate: new Date("11/08/2019"),
               appTime: "1:30pm",
               appDuration: 45,
-              roomNumber: "A-2222"
+              roomNumber: "A-2222",
+              patient: patTomRivers
               ).save()
 
             // Prescription Domain Class Instances
@@ -142,6 +144,10 @@ class BootStrap {
                 dateIssued: new Date("20/05/2019"),
                 patientIsPaying: true
                 ).save()
+
+
+                
+
     }
     def destroy = {
     }
