@@ -2,5 +2,5 @@ package com.csmith
 
 class AppointmentController {
 
-    def index() { }
+  def scaffold = Appointment;
 }

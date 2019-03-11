@@ -2,5 +2,5 @@ package com.csmith
 
 class PrescriptionController {
 
-    def index() { }
+    def scaffold = Prescription;
 }

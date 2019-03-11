@@ -5,7 +5,7 @@ class Prescription {
   String pharmacyName;
   int prescripNumber;
   String medicene;
-  String totalCost;
+  double totalCost;
   Date dateIssued;
   Boolean patientIsPaying;
 
@@ -13,7 +13,7 @@ class Prescription {
       pharmacyName blank:false, nullable: false
       prescripNumber blank:false, nullable: false, unique: true
       medicene blank:false, nullable: false
-      totalCost blank:false, nullable: false
+      totalCost blank:false, nullable: false, scale: 2
       dateIssued blank:false, nullable: false
       patientIsPaying blank:false, nullable: false
     }

@@ -2,5 +2,5 @@ package com.csmith
 
 class DoctorController {
 
-    def index() { }
+    def scaffold = Doctor;
 }
