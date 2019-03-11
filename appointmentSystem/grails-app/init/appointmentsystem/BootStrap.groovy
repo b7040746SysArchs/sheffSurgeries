@@ -146,7 +146,11 @@ class BootStrap {
                 ).save()
 
 
-                
+                cityHealthCare.addToNurses(nurseGeorgeTimmins)
+                cityHealthCare.addToDoctors(drBrianDoctor)
+                cityHealthCare.addToReceptionists(recepRobKingston)
+                cityHealthCare.addToPatients(patJackReacher)
+                cityHealthCare.addToAppointments(appointment1)
 
     }
     def destroy = {
