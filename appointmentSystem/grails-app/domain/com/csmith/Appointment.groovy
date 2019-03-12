@@ -9,6 +9,12 @@ class Appointment {
   Patient patient;
   Doctor doctor;
 
+  static belongsTo = [Surgery]
+
+  String toString(){
+    return appDate;
+  }
+
     static constraints = {
       appDate blank:false, nullable: false
       appTime blank:false, nullable: false
