@@ -8,6 +8,7 @@ class Appointment {
   String roomNumber;
   Patient patient;
   Doctor doctor;
+  Surgery surgery;
 
   static belongsTo = [Surgery]
 

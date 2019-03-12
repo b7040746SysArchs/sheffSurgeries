@@ -8,12 +8,11 @@ class Nurse {
   String nurseOffice;
   String nursePhone;
   Surgery surgery;
+  Doctor doctor;
 
   String toString(){
     return nurseName
   }
-
-  static hasMany = [doctors: Doctor]
 
     static constraints = {
       nurseName blank:false, nullable: false

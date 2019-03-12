@@ -80,7 +80,8 @@ class BootStrap {
           recepEmail: "r.kingston@email.com",
           recepUsername: "rking",
           recepPassword: "secret2019",
-          recepPhone: "0114 222 4445"
+          recepPhone: "0114 222 4445",
+          surgery: cityHealthCare
           ).save()
 
           def recepLaurenEdwards = new Receptionist(
@@ -88,7 +89,8 @@ class BootStrap {
             recepEmail: "l.edwards@email.com",
             recepUsername: "ledwards",
             recepPassword: "password123",
-            recepPhone: "0114 222 4447"
+            recepPhone: "0114 222 4447",
+            surgery: countryHealthCare
             ).save()
 
           // Nurse Domain Class Instances
@@ -119,7 +121,8 @@ class BootStrap {
               nurseEmail: "G.Timmins@myemail.com",
               nurseOffice: "B-422",
               nursePhone: "0114 222 4422",
-              surgery: countryHealthCare
+              surgery: countryHealthCare,
+              doctor: drBrianDoctor
               ).save()
 
           //  Appointment Domain Class Instances
@@ -129,7 +132,9 @@ class BootStrap {
             appTime: "3:00pm",
             appDuration: 30,
             roomNumber: "A-1111",
-            patient: patJackReacher
+            patient: patJackReacher,
+            doctor: drSarahMacdonald,
+            surgery: countryHealthCare
             ).save()
 
             def appointment2 = new Appointment(
@@ -137,7 +142,9 @@ class BootStrap {
               appTime: "1:30pm",
               appDuration: 45,
               roomNumber: "A-2222",
-              patient: patTomRivers
+              patient: patTomRivers,
+              doctor: drSarahMacdonald,
+              surgery: cityHealthCare
               ).save()
 
             // Prescription Domain Class Instances
