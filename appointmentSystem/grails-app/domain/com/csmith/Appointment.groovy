@@ -7,8 +7,7 @@ class Appointment {
   int appDuration;
   String roomNumber;
   Patient patient;
-
-  static hasMany = [surgeries: Surgery]
+  Doctor doctor;
 
     static constraints = {
       appDate blank:false, nullable: false

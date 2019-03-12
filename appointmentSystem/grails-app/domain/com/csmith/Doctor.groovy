@@ -15,7 +15,7 @@ class Doctor {
     return fullName
   }
 
-  static hasMany=[prescriptions: Prescription, appointments: Appointment, nurses: Nurse, patients: Patient]
+  static hasMany=[prescriptions: Prescription, appointments: Appointment, nurses: Nurse, patients: Patient, surgeries: Surgery]
 
     static constraints = {
       fullName blank:false, nullable: false

@@ -59,7 +59,8 @@ class BootStrap {
           patientDob: new Date("09/09/1997"),
           patientID: "E667SG",
           dateRegistered: new Date("05/11/1998"),
-          patientPhone: "0114 222 4444"
+          patientPhone: "0114 222 4444",
+          surgery: countryHealthCare
           ).save()
 
           def patJackReacher = new Patient(
@@ -69,7 +70,8 @@ class BootStrap {
             patientDob: new Date("09/09/1980"),
             patientID: "E337SG",
             dateRegistered: new Date("05/11/1985"),
-            patientPhone: "0114 222 5555"
+            patientPhone: "0114 222 5555",
+            surgery: cityHealthCare
             ).save()
 
           // Receptionist Domain Class Instances
@@ -96,15 +98,28 @@ class BootStrap {
             qualifications: "Registered General Nurse",
             nurseEmail: "s.peters@myemail.com",
             nurseOffice: "B-455",
-            nursePhone: "0114 222 4433"
+            nursePhone: "0114 222 4433",
+            surgery: cityHealthCare,
+            doctor: drSarahMacdonald
             ).save()
+
+            def nurseLucyPeters = new Nurse(
+              nurseName: "Lucy Peters",
+              qualifications: "Registered General Nurse",
+              nurseEmail: "l.peters@myemail.com",
+              nurseOffice: "B-415",
+              nursePhone: "0114 222 2245",
+              surgery: cityHealthCare,
+              doctor: drBrianDoctor
+              ).save()
 
             def nurseGeorgeTimmins = new Nurse(
               nurseName: "George Timmins",
               qualifications: "Registered General Nurse",
               nurseEmail: "G.Timmins@myemail.com",
               nurseOffice: "B-422",
-              nursePhone: "0114 222 4422"
+              nursePhone: "0114 222 4422",
+              surgery: countryHealthCare
               ).save()
 
           //  Appointment Domain Class Instances
@@ -133,7 +148,9 @@ class BootStrap {
               medicene: "Paracetomol",
               totalCost: 5.50,
               dateIssued: new Date("25/05/2019"),
-              patientIsPaying: false
+              patientIsPaying: false,
+              patient: patTomRivers,
+              doctor: drSarahMacdonald
               ).save()
 
               def prescription2 = new Prescription(
@@ -142,15 +159,12 @@ class BootStrap {
                 medicene: "Antibiotecs",
                 totalCost: 9.55,
                 dateIssued: new Date("20/05/2019"),
-                patientIsPaying: true
+                patientIsPaying: true,
+                patient: patJackReacher,
+                doctor: drBrianDoctor
                 ).save()
 
 
-                cityHealthCare.addToNurses(nurseGeorgeTimmins)
-                cityHealthCare.addToDoctors(drBrianDoctor)
-                cityHealthCare.addToReceptionists(recepRobKingston)
-                cityHealthCare.addToPatients(patJackReacher)
-                cityHealthCare.addToAppointments(appointment1)
 
     }
     def destroy = {
