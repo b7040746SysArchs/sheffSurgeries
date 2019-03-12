@@ -15,12 +15,6 @@ class Nurse {
 
   static hasMany = [doctors: Doctor]
 
-<<<<<<< HEAD
-  static belongsTo = [Surgery]
-=======
-  static belongsTo = [Doctor, Surgery]
->>>>>>> f0ee6bb8f7e9f3bca0fdac8849548e5e1d1a3169
-
     static constraints = {
       nurseName blank:false, nullable: false
       qualifications blank:false, nullable: false
