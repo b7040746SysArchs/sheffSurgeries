@@ -15,7 +15,7 @@
             <a href='${createLink(controller:'doctor', action:'login')}'><button id="btnHomepage" class="btn btn-warning">DOCTOR LOGIN</button></a>
           </div>
           <div class="col-sm-9">
-          <asset:image src="logoLarge.png" />
+          <asset:image style="width:75%; border-radius:15px;" src="doctors.jpg" />
         </div>
         </div>
     </section>

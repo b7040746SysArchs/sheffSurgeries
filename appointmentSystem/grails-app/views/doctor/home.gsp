@@ -9,41 +9,27 @@
 <div id="content" role="main">
     <section class="row colset-2-its">
         <div style="margin: 15px;">
-          <h1 id="taglineHome">DOCTOR ADMIN</h1>
+          <h1 id="taglineHome">PRESCRIPTION ADMIN</h1>
           <button type="button" id="gLinkBtn" class="btn btn-warning">
-            <g:link controller="doctor" action="create">Add Doctor</g:link>
+            <g:link controller="prescription" action="create">Create New Prescription</g:link>
           </button>
           <button type="button" id="gLinkBtn" class="btn btn-warning">
-            <g:link controller="doctor" action="index">View Doctors</g:link>
+            <g:link controller="prescription" action="index">View Prescriptions</g:link>
           </button>
           </div>
           <div style="margin: 15px;">
-            <h1 id="taglineHome">NURSE ADMIN</h1>
+            <h1 id="taglineHome">PATIENT ADMIN</h1>
             <button type="button" id="gLinkBtn" class="btn btn-warning">
-              <g:link controller="nurse" action="create">Add Nurse</g:link>
-            </button>
-            <button type="button" id="gLinkBtn" class="btn btn-warning">
-              <g:link controller="nurse" action="index">View Nurses</g:link>
+              <g:link controller="patient" action="index">View Patients</g:link>
             </button>
             </div>
             <div style="margin: 15px;">
-              <h1 id="taglineHome">PATIENT ADMIN</h1>
+              <h1 id="taglineHome">APPOINTMENT ADMIN</h1>
               <button type="button" id="gLinkBtn" class="btn btn-warning">
-                <g:link controller="patient" action="create">Add Patient</g:link>
-              </button>
-              <button type="button" id="gLinkBtn" class="btn btn-warning">
-                <g:link controller="patient" action="index">View Patients</g:link>
+                <g:link controller="appointment" action="index">View Appointments</g:link>
               </button>
               </div>
-              <div style="margin: 15px;">
-                <h1 id="taglineHome">RECEPTIONIST ADMIN</h1>
-                <button type="button" id="gLinkBtn" class="btn btn-warning">
-                  <g:link controller="receptionist" action="create">Add Receptionist</g:link>
-                </button>
-                <button type="button" id="gLinkBtn" class="btn btn-warning">
-                  <g:link controller="receptionist" action="index">View Receptionists</g:link>
-                </button>
-                </div>
+
     </section>
 </div>
 

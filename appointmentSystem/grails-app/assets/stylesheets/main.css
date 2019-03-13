@@ -42,6 +42,12 @@
   background: #f2f2f2;
 }
 
+#loginLabel{
+  color: #02111F;
+  font-size: 22px;
+  font-weight: bold;
+}
+
 label{
   color: #f2f2f2;
 }

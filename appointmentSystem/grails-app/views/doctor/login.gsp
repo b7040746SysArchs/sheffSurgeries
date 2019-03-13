@@ -5,34 +5,34 @@
     <title>SHEFF SURGERIES | Dorctor Login</title>
 </head>
 <body>
-<h1 ID="taglineHome">DOCTOR LOGIN</h1>
 <div id="recepLoginForm">
 
   <g:if test="${flash.message}">
    <div class="message">${flash.message}</div>
    </g:if>
-
+<a style="float: right;" href='${createLink(url:'/')}'><button id="btnHomepage" class="btn btn-secondary">GO BACK</button></a>
    <g:form action="validate">
- <input type="hidden" name="cName" value="${cName}">
- <input type="hidden" name="aName" value="${aName}">
+   <h1 style="text-align:center; font-size: 30px;" id="taglineHome">DOCTOR LOGIN</h1>
+ <input type="hidden" placeholder="Email Address" name="cName" value="${cName}">
+ <input type="hidden" placeholder="Password" name="aName" value="${aName}">
  <table>
    <tr class="prop">
      <td class="name">
-       <label for="username">Email:</label>
+       <label id="loginLabel" for="username">Email:</label>
      </td>
      <td class="value">
        <input type="text" id="username" name="username" value="">
      </td></tr>
    <tr class="prop">
      <td class="name">
-       <label for="password">Password:</label>
+       <label id="loginLabel" for="password">Password:</label>
      </td>
      <td class="value">
        <input type="password" id="password" name="password" value="">
      </td></tr>
    <tr><td></td>
      <td>
-       <input type="submit" value="login"/>
+       <input class="btn btn-success" type="submit" id="btnHomepage" value="LOGIN"/>
      </td></tr>
  </table>
 </g:form>
