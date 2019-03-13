@@ -13,6 +13,7 @@ class ReceptionistController {
 
       if(user && user.recepPassword == params.password){
         session.user = user
+        session.userType = "recep"
 
         render view:'home'
       }else{

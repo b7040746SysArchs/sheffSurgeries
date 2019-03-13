@@ -13,6 +13,7 @@ class DoctorController {
 
       if(user && user.password == params.password){
         session.user = user
+        session.userType = "doctor"
 
         render view:'home'
       }else{
