@@ -17,6 +17,8 @@ class Patient {
 
   static hasMany = [doctors: Doctor, prescriptions: Prescription]
 
+  static belongsTo = [Doctor]
+
     static constraints = {
 
       patientName blank:false, nullable: false

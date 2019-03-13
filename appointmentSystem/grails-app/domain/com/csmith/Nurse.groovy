@@ -8,7 +8,10 @@ class Nurse {
   String nurseOffice;
   String nursePhone;
   Surgery surgery;
-  Doctor doctor;
+
+  static hasMany = [doctors: Doctor]
+
+  static belongsTo = Doctor
 
   String toString(){
     return nurseName
@@ -20,5 +23,6 @@ class Nurse {
       nurseEmail blank:false, nullable: false, unique: true
       nurseOffice blank:false, nullable: false
       nurseOffice blank:false, nullable: false
+      surgery blank: true, nullable: true
     }
 }

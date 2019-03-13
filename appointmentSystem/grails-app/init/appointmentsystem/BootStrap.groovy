@@ -101,8 +101,7 @@ class BootStrap {
             nurseEmail: "s.peters@myemail.com",
             nurseOffice: "B-455",
             nursePhone: "0114 222 4433",
-            surgery: cityHealthCare,
-            doctor: drSarahMacdonald
+            surgery: cityHealthCare
             ).save()
 
             def nurseLucyPeters = new Nurse(
@@ -111,8 +110,7 @@ class BootStrap {
               nurseEmail: "l.peters@myemail.com",
               nurseOffice: "B-415",
               nursePhone: "0114 222 2245",
-              surgery: cityHealthCare,
-              doctor: drBrianDoctor
+              surgery: cityHealthCare
               ).save()
 
             def nurseGeorgeTimmins = new Nurse(
@@ -121,8 +119,7 @@ class BootStrap {
               nurseEmail: "G.Timmins@myemail.com",
               nurseOffice: "B-422",
               nursePhone: "0114 222 4422",
-              surgery: countryHealthCare,
-              doctor: drBrianDoctor
+              surgery: countryHealthCare
               ).save()
 
           //  Appointment Domain Class Instances
@@ -171,6 +168,11 @@ class BootStrap {
                 doctor: drBrianDoctor
                 ).save()
 
+
+                nurseLucyPeters.addToDoctors(drBrianDoctor)
+                nurseSusanPeters.addToDoctors(drBrianDoctor)
+
+                patTomRivers.addToDoctors(drBrianDoctor)
 
 
     }
