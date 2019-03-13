@@ -9,7 +9,6 @@ class Appointment {
   Doctor doctor;
   Surgery surgery;
   Patient patient;
-  //static belongsTo = [Surgery]
 
   String toString(){
     return appDate;
