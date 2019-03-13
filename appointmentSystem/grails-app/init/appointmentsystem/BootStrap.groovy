@@ -5,7 +5,7 @@ class BootStrap {
     def init = { servletContext ->
 
       // Surgery Domain Class Instances
-      /*
+
       def cityHealthCare = new Surgery(
         name: "City Health Care",
         address: "21 Marble Street Sheffield",
@@ -178,7 +178,7 @@ class BootStrap {
                 patTomRivers.addToDoctors(drBrianDoctor)
                 patJackReacher.addToDoctors(drSarahMacdonald)
 
-                */
+                
     }
     def destroy = {
     }
