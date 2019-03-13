@@ -22,5 +22,7 @@ class Prescription {
       totalCost blank:false, nullable: false, scale: 2
       dateIssued blank:false, nullable: false
       patientIsPaying blank:false, nullable: false
+      patient blank: true, nullable: true
+      doctor blank: true, nullable: true
     }
 }

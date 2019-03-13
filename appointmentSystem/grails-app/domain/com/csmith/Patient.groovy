@@ -28,5 +28,6 @@ class Patient {
       patientID blank:false, nullable: false, unique: true
       dateRegistered blank:false, nullable: false
       patientPhone blank:false, nullable: false
+      surgery blank: true, nullable: true
     }
 }

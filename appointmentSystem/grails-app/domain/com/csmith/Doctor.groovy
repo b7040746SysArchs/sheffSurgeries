@@ -27,5 +27,6 @@ class Doctor {
       doctorOffice blank:false, nullable: false
       doctorPhone blank:false, nullable: false
       bio nullable: false, maxSize: 5000, widget: "textarea"
+      surgery blank: true, nullable: true
     }
 }

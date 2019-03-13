@@ -20,5 +20,8 @@ class Appointment {
       appTime blank:false, nullable: false
       appDuration blank:false, nullable: false, max:60
       roomNumber blank:false, nullable: false
+      doctor blank: true, nullable: true
+      surgery blank: true, nullable: true
+      patient blank: true, nullable: true
     }
 }
