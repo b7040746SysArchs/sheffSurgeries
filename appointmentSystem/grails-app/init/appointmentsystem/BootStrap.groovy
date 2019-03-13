@@ -36,7 +36,8 @@ class BootStrap {
           password: "secret222",
           doctorOffice: "D-9888",
           doctorPhone: "0114 230 222 5555",
-          bio: "orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          bio: "orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          surgery: countryHealthCare
           ).save()
 
         def drBrianDoctor = new Doctor(
@@ -47,7 +48,8 @@ class BootStrap {
           password: "superSecret222",
           doctorOffice: "D-9889",
           doctorPhone: "0114 230 222 2552",
-          bio: "orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          bio: "orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          surgery: cityHealthCare
           ).save()
 
           // Patient Domain Class Instances

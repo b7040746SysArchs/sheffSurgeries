@@ -10,12 +10,13 @@ class Doctor {
   String doctorOffice;
   String doctorPhone;
   String bio;
+  Surgery surgery;
 
   String toString(){
     return fullName
   }
 
-  static hasMany=[appointments: Appointment, nurses: Nurse, patients: Patient, surgeries: Surgery]
+  static hasMany=[appointments: Appointment, nurses: Nurse, patients: Patient]
 
     static constraints = {
       fullName blank:false, nullable: false
