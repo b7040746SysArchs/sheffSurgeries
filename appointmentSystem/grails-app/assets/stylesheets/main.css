@@ -1,7 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+
+/* CUSTOM CSS*/
+
+#content{
+  background: #02111F;
+}
+
+#taglineHome{
+  color: #ffb52e;
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+
 /* FONT STACK */
 body,
 input, select, textarea {
-    font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -11,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 /* BASE LAYOUT */
 
 html {
-    background-color: #ddd;
+    background-color: #02111f;
     background-image: -moz-linear-gradient(center top, #aaa, #ddd);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #aaa), color-stop(1, #ddd));
     background-image: linear-gradient(to bottom, #aaa, #ddd);
@@ -25,7 +42,7 @@ html {
 }
 
 html.no-cssgradients {
-    background-color: #aaa;
+    background-color: #02111f;
 }
 
 html * {
@@ -33,7 +50,7 @@ html * {
 }
 
 body {
-    background-color: #F5F5F5;
+    background-color: #02111f;
     color: #333333;
     overflow-x: hidden; /* prevents box-shadow causing a horizontal scrollbar in firefox when viewport < 960px wide */
     -moz-box-shadow: 0 0 0.3em #424649;

@@ -1,0 +1,22 @@
+#logoHeader{
+
+}
+
+#headerNav{
+  background: #02111F !important;
+}
+
+#footerContainer{
+  background: #f2f2f2;
+  border-radius: 15px;
+}
+
+.footerTitle{
+  color: #02111F;
+  font-size: 22px;
+}
+
+#footerBlurb{
+  display: flex;
+  align-items: center;
+}
