@@ -24,6 +24,7 @@ class ReceptionistController {
 
     def logout(){
       session.user = null
+      session.userType = null
       redirect(url:'/')
     }
 }

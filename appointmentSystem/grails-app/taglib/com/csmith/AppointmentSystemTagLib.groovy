@@ -1,4 +1,5 @@
 package com.csmith
+import groovy.sql.Sql
 
 class AppointmentSystemTagLib {
     //static defaultEncodeAs = [taglib:'html']
@@ -24,4 +25,25 @@ class AppointmentSystemTagLib {
           out << "</div><br/>"
 }
 
+def nextAppointment = {
+  if(session.userType == "doctor"){
+    def sql = Sql.newInstance("jdbc:mysql://localhost:3306/GrailsDevelopment", "GrailsAdmin", "password", "com.mysql.jdbc.Driver")
+    String sqlQuery = "SELECT * FROM appointment ORDER BY app_date LIMIT 1"
+    def appointmentList = sql.rows(sqlQuery)
+
+    out << "<h1>${appointmentList}</h1>"
+  }
 }
+
+}
+
+/*
+def nextAppointment = {
+  if(session.userType == "doctor"){
+    def sql = Sql.newInstance("jdbc:mysql://localhost:3306/GrailsDevelopment", "GrailsAdmin", "password", "com.mysql.jdbc.Driver")
+    session.appointmentResults = sql.executeQuery("SELECT * FROM appointment ORDER BY app_date LIMIT 1")
+    out << "<h1>${session.appointmentResults}</h1>"
+  }
+}
+
+*/

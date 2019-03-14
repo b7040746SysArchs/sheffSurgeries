@@ -29,6 +29,7 @@
 <g:loginToggle />
 </nav>
 
+<g:nextAppointment />
 <g:layoutBody/>
 
 <div class="footer row" id="footerContainer" role="contentinfo">
