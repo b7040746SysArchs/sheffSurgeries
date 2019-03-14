@@ -18,8 +18,8 @@
             <td><g:textField  name="medicene" /></td>
             <td>Total Cost</td>
             <td><g:textField  name="totalCost" /></td>
-            <td>Patient Is Paying</td>
-            <td><g:textField  name="patientIsPaying" /></td>
+            <td>Days Of Supply</td>
+            <td><g:textField  name="daysSupply" /></td>
           </tr>
           <tr>
             <td>Query Type:</td>
@@ -30,7 +30,7 @@
           </tr>
           <tr>
             <td>
-              <g:submitButton name="search" value="search"/>
+              <g:submitButton name="search" value="SEARCH"/>
             </td>
           </tr>
           </g:form>

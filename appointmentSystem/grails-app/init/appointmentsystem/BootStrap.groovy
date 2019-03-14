@@ -155,6 +155,7 @@ class BootStrap {
               totalCost: 5.50,
               dateIssued: new Date("25/05/2019"),
               patientIsPaying: false,
+              daysSupply: "4 days",
               patient: patTomRivers,
               doctor: drSarahMacdonald
               ).save()
@@ -166,6 +167,7 @@ class BootStrap {
                 totalCost: 9.55,
                 dateIssued: new Date("20/05/2019"),
                 patientIsPaying: true,
+                daysSupply: "45 days",
                 patient: patJackReacher,
                 doctor: drBrianDoctor
                 ).save()
@@ -178,7 +180,7 @@ class BootStrap {
                 patTomRivers.addToDoctors(drBrianDoctor)
                 patJackReacher.addToDoctors(drSarahMacdonald)
 
-                
+
     }
     def destroy = {
     }

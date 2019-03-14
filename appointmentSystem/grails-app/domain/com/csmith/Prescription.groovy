@@ -8,6 +8,7 @@ class Prescription {
   double totalCost;
   Date dateIssued;
   Boolean patientIsPaying;
+  String daysSupply;
   Patient patient;
   Doctor doctor;
 
@@ -22,6 +23,7 @@ class Prescription {
       totalCost blank:false, nullable: false, scale: 2
       dateIssued blank:false, nullable: false
       patientIsPaying blank:false, nullable: false
+      daysSupply blank:false, nullable: false
       patient blank: true, nullable: true
       doctor blank: true, nullable: true
     }
