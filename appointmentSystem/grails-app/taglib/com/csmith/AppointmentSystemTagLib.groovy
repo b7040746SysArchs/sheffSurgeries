@@ -35,23 +35,21 @@ def nextAppointment = {
     def room_number = appointmentList[0][8]
     def app_duration = appointmentList[0][5]
     def app_time = appointmentList[0][6]
+    out << '<div class="container" id="nextAppointmentContainer">'
+    out << '<div class="panel panel-default">'
+    out << '<div class="panel-heading" id="drNextAppointment" style="font-weight:bold;">YOUR NEXT APPOINTMENT</div>'
+    out << '<div class="panel-body">'
 
-    out << "<h1>${app_time}</h1>"
-    out << "<p>${app_date}</p>"
-    out << "<p>${app_duration}</p>"
-    out << "<p>${room_number}</p>"
+    out << "<tr><p>"
+    out << "<span id='tblData'><strong>Time: </strong>${app_time}</span>"
+    out << "<span id='tblData'><strong>Date: </strong>${app_date}</span>"
+    out << "<span id='tblData'><strong>Length: </strong>${app_duration} Minutes</span>"
+    out << "<span id='tblData'><strong>Room Number: </strong>${room_number}</span>"
+    out << "</p></tr>"
+    out << "</div>"
+    out << "</div>"
+    out << "</div>"
   }
 }
 
 }
-
-/*
-def nextAppointment = {
-  if(session.userType == "doctor"){
-    def sql = Sql.newInstance("jdbc:mysql://localhost:3306/GrailsDevelopment", "GrailsAdmin", "password", "com.mysql.jdbc.Driver")
-    session.appointmentResults = sql.executeQuery("SELECT * FROM appointment ORDER BY app_date LIMIT 1")
-    out << "<h1>${session.appointmentResults}</h1>"
-  }
-}
-
-*/
