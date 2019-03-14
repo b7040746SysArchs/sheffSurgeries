@@ -9,13 +9,13 @@ class AppointmentSystemTagLib {
         if (request.getSession(false) && session.user){
           if(session.userType == "doctor"){
             out << "<span style='float:left; color: white; margin-left: 15px'>"
-            out << "Welcome ${session.user}."
+            out << "Welcome ${session.user}.  "
             out << "</span><span style='float:right;margin-right:15px'>"
-            out << "<a href='${createLink(controller:'doctor', action:'logout')}'>"
+            out << "<a class='badge badge-warning' href='${createLink(controller:'doctor', action:'logout')}'>"
             out << "Logout </a></span>"
           }else if(session.userType == "recep"){
             out << "<span style='float:left; color: white; margin-left:15px'>"
-            out << "Welcome ${session.user}."
+            out << "Welcome ${session.user}.  "
             out << "</span><span style='float:right;margin-right:15px; color'>"
             out << "<a class='badge badge-warning' href='${createLink(controller:'receptionist', action:'logout')}'>"
             out << "Logout </a></span>"

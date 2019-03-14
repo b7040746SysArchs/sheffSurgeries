@@ -9,15 +9,15 @@ class PrescriptionController {
     }
 
     def advSearch(){
-      
+
     }
 
-    def results(String name){
+    def results(String mediceneName){
       def prescriptions=Prescription.where{
-        medicene=~name
+        medicene=~mediceneName
       }list()
       return[prescriptions:prescriptions,
-      term:params.name,
+      term:params.mediceneName,
       totalPrescriptions: Prescription.count()]
     }
 
