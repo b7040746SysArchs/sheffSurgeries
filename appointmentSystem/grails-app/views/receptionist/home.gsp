@@ -34,6 +34,9 @@
               <button type="button" id="gLinkBtn" class="btn btn-warning">
                 <g:link controller="patient" action="index">View Patients</g:link>
               </button>
+              <button type="button" id="gLinkBtn" class="btn btn-warning">
+                <g:link controller="patient" action="advSearch">Advanced Patient Search</g:link>
+              </button>
               </div>
               <div style="margin: 15px;">
                 <h1 id="taglineHome">RECEPTIONIST ADMIN</h1>
