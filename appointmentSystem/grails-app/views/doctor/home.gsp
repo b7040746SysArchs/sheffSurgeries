@@ -16,6 +16,12 @@
           <button type="button" id="gLinkBtn" class="btn btn-warning">
             <g:link controller="prescription" action="index">View Prescriptions</g:link>
           </button>
+          <button type="button" id="gLinkBtn" class="btn btn-warning">
+            <g:link controller="prescription" action="search">Search Prescriptions</g:link>
+          </button>
+          <button type="button" id="gLinkBtn" class="btn btn-warning">
+            <g:link controller="prescription" action="advSearch">Advanced Search</g:link>
+          </button>
           </div>
           <div style="margin: 15px;">
             <h1 id="taglineHome">PATIENT ADMIN</h1>

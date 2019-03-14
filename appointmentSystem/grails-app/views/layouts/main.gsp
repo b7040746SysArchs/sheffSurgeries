@@ -28,8 +28,7 @@
     </div>
 <g:loginToggle />
 </nav>
-<g:dateAndTime />
-<g:test />
+
 <g:layoutBody/>
 
 <div class="footer row" id="footerContainer" role="contentinfo">
