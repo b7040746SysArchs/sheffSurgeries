@@ -31,7 +31,15 @@ def nextAppointment = {
     String sqlQuery = "SELECT * FROM appointment ORDER BY app_date LIMIT 1"
     def appointmentList = sql.rows(sqlQuery)
 
-    out << "<h1>${appointmentList}</h1>"
+    def app_date = appointmentList[0][4]
+    def room_number = appointmentList[0][8]
+    def app_duration = appointmentList[0][5]
+    def app_time = appointmentList[0][6]
+
+    out << "<h1>${app_time}</h1>"
+    out << "<p>${app_date}</p>"
+    out << "<p>${app_duration}</p>"
+    out << "<p>${room_number}</p>"
   }
 }
 
