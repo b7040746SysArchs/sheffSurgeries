@@ -62,24 +62,32 @@ def nextAppointment = {
     /*
     sql.rows() returns an array of arrays, so we need to drill down into the first array at index [0] then grab the data we need
     */
-    def app_date = appointmentList[0][4]
-    def room_number = appointmentList[0][8]
-    def app_duration = appointmentList[0][5]
-    def app_time = appointmentList[0][6]
-    out << '<div class="container" id="nextAppointmentContainer">'
-    out << '<div class="panel panel-default">'
-    out << '<div class="panel-heading" id="drNextAppointment" style="font-weight:bold;">YOUR NEXT APPOINTMENT</div>'
-    out << '<div class="panel-body">'
+    if( !appointmentList.isEmpty()){
+      def app_date = appointmentList[0][4]
+      def room_number = appointmentList[0][8]
+      def app_duration = appointmentList[0][5]
+      def app_time = appointmentList[0][6]
+        out << '<div class="container" id="nextAppointmentContainer">'
+        out << '<div class="panel panel-default">'
+        out << '<div class="panel-heading" id="drNextAppointment" style="font-weight:bold;">YOUR NEXT APPOINTMENT</div>'
+        out << '<div class="panel-body">'
 
-    out << "<tr><p>"
-    out << "<span id='tblData'><strong>Time: </strong>${app_time}</span>"
-    out << "<span id='tblData'><strong>Date: </strong>${app_date}</span>"
-    out << "<span id='tblData'><strong>Length: </strong>${app_duration} Minutes</span>"
-    out << "<span id='tblData'><strong>Room Number: </strong>${room_number}</span>"
-    out << "</p></tr>"
-    out << "</div>"
-    out << "</div>"
-    out << "</div>"
+        out << "<tr><p>"
+        out << "<span id='tblData'><strong>Time: </strong>${app_time}</span>"
+        out << "<span id='tblData'><strong>Date: </strong>${app_date}</span>"
+        out << "<span id='tblData'><strong>Length: </strong>${app_duration} Minutes</span>"
+        out << "<span id='tblData'><strong>Room Number: </strong>${room_number}</span>"
+        out << "</p></tr>"
+        out << "</div>"
+        out << "</div>"
+        out << "</div>"
+    }else{
+      out << '<div class="container" id="nextAppointmentContainer">'
+      out << '<div class="panel panel-default">'
+      out << '<div class="panel-heading" id="drNextAppointment" style="font-weight:bold;">YOU HAVE NO APPOINTMENTS</div>'
+      out << '</div></div>'
+    }
+
   }
 }
 
