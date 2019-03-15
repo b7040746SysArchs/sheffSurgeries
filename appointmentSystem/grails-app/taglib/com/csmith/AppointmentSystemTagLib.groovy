@@ -59,10 +59,8 @@ def nextAppointment = {
     This is a session variable which we assign from params.username in DoctorController when the Doctor logins in */
     String sqlQuery = "SELECT * FROM appointment WHERE doctor_id = (SELECT doctor_id FROM doctor WHERE doctor_email = '${session.doctorEmail}')  ORDER BY app_date LIMIT 1"
     def appointmentList = sql.rows(sqlQuery)
-    /*
-    sql.rows() returns an array of arrays, so we need to drill down into the first array at index [0] then grab the data we need
-    */
-    if( !appointmentList.isEmpty()){
+    //sql.rows() returns an array of arrays, so we need to drill down into the first array at index [0] then grab the data we need
+    if( !appointmentList.isEmpty() ){
       def app_date = appointmentList[0][4]
       def room_number = appointmentList[0][8]
       def app_duration = appointmentList[0][5]
