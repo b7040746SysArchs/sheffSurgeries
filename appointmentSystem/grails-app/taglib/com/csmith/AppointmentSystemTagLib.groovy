@@ -1,5 +1,6 @@
 package com.csmith
 import groovy.sql.Sql
+import grails.util.Environment
 
 class AppointmentSystemTagLib {
     //static defaultEncodeAs = [taglib:'html']
@@ -25,12 +26,42 @@ class AppointmentSystemTagLib {
           out << "</div><br/>"
 }
 
+/*
+nextAppointment tag is embedded within main.gsp and injected into the header
+
+PURPOSE - Show the doctor what their next appointment is
+*/
+
 def nextAppointment = {
   if(session.userType == "doctor"){
-    def sql = Sql.newInstance("jdbc:mysql://localhost:3306/GrailsDevelopment", "GrailsAdmin", "password", "com.mysql.jdbc.Driver")
-    String sqlQuery = "SELECT * FROM appointment ORDER BY app_date LIMIT 1"
-    def appointmentList = sql.rows(sqlQuery)
 
+ /* We use a switch case on the current Environment. Depending on the environment, we store the uppercase version of the string
+  in a variable which is placed inside our sql query. We do this to ensure we are using the database which corresponds the
+  correct environment
+ */
+    String environment;
+
+    switch(Environment.current) {
+      case Environment.DEVELOPMENT:
+        environment = "Development"
+      break
+      case Environment.TEST:
+        environment = "Test"
+      break
+      case Environment.PRODUCTION:
+        environment = "Production"
+      break
+    }
+
+    /* Preliminary setup of a new Sql instance, containing DB URL, DB Username, DB Password and JDBC Driver */
+    def sql = Sql.newInstance("jdbc:mysql://localhost:3306/Grails${environment}", "GrailsAdmin", "password", "com.mysql.jdbc.Driver")
+    /* The actual query - we want to find the most recent appointment. We filter using SQL WHERE with session.doctorEmail
+    This is a session variable which we assign from params.username in DoctorController when the Doctor logins in */
+    String sqlQuery = "SELECT * FROM appointment WHERE doctor_id = (SELECT doctor_id FROM doctor WHERE doctor_email = '${session.doctorEmail}')  ORDER BY app_date LIMIT 1"
+    def appointmentList = sql.rows(sqlQuery)
+    /*
+    sql.rows() returns an array of arrays, so we need to drill down into the first array at index [0] then grab the data we need
+    */
     def app_date = appointmentList[0][4]
     def room_number = appointmentList[0][8]
     def app_duration = appointmentList[0][5]
