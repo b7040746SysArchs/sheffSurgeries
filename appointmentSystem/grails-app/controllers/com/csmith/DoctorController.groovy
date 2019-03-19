@@ -1,5 +1,8 @@
 package com.csmith
 
+import groovy.sql.Sql
+import grails.util.Environment
+
 class DoctorController {
 
     def scaffold = Doctor;
@@ -27,6 +30,39 @@ class DoctorController {
       session.user = null
       session.userType = null
       redirect(url:'/')
+    }
+
+
+    def doctorDetailsJSON(){
+
+      String environment;
+
+      switch(Environment.current) {
+        case Environment.DEVELOPMENT:
+          environment = "Development"
+        break
+        case Environment.TEST:
+          environment = "Test"
+        break
+        case Environment.PRODUCTION:
+          environment = "Production"
+        break
+      }
+
+      /* Preliminary setup of a new Sql instance, containing DB URL, DB Username, DB Password and JDBC Driver */
+      def sql = Sql.newInstance("jdbc:mysql://localhost:3306/Grails${environment}", "GrailsAdmin", "password", "com.mysql.jdbc.Driver")
+      String sqlQuery = "SELECT full_name, doctor_email, doctor_phone FROM doctor"
+      def doctorContactDetails = sql.rows(sqlQuery)
+      //sql.rows() returns an array of arrays, so we need to drill down into the first array at index [0] then grab the data we need
+      if( !doctorContactDetails.isEmpty() ){
+        render(contentType: "text/json"){
+          doctorsDetails{
+            //appointment(time: "3pm", date: "Today")
+            doctors(doctorContactDetails)
+          }
+        }
+      }
+
     }
 
 }

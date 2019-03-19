@@ -4,9 +4,10 @@
     <meta name="layout" content="main"/>
     <title>SHEFF SURGERIES | Home</title>
 </head>
-<body>
+<body onload="getTodaysAppointments()">
 
 <div id="content" role="main">
+  <h1 id="taglineHome" style="text-align: center; font-size: 35px">RECEPTION DASHBOARD</h1>
     <section class="row colset-2-its">
         <div style="margin: 15px;">
           <h1 id="taglineHome">DOCTOR ADMIN</h1>
@@ -47,10 +48,34 @@
                   <g:link controller="receptionist" action="index">View Receptionists</g:link>
                 </button>
                 </div>
+                </br><h1 id="taglineHome" style="text-align: center; font-size: 35px">DOCTOR CONTACT DETAILS</h1>
+                <div id="injectAppointments"></div>
+
     </section>
-
-
 </div>
+<g:javascript>
+  let appointments = document.getElementById("injectAppointments");
+  if(appointments){
+    let Url = "http://localhost:8080/doctor/doctorDetailsJSON"
+    fetch(Url)
+    .then(res => res.json())
+    .then(data => {
+      let doctorsDetails = data.doctorsDetails.doctors
 
+        for(let index = 0; index < doctorsDetails.length; index++){
+          tempDOM = document.createElement("P")
+          tempDOM.setAttribute("id", `${index}_Doctor`)
+          tempDOM.innerHTML = doctorsDetails[index].full_name + " | " + doctorsDetails[index].doctor_email + " | " + doctorsDetails[index].doctor_phone
+          appointments.appendChild(tempDOM)
+        }
+    })
+    .catch(err => {
+      console.log(err)
+    })
+  }
+
+
+
+</g:javascript>
 </body>
 </html>
