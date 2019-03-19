@@ -53,11 +53,9 @@ class DoctorController {
       def sql = Sql.newInstance("jdbc:mysql://localhost:3306/Grails${environment}", "GrailsAdmin", "password", "com.mysql.jdbc.Driver")
       String sqlQuery = "SELECT full_name, doctor_email, doctor_phone FROM doctor"
       def doctorContactDetails = sql.rows(sqlQuery)
-      //sql.rows() returns an array of arrays, so we need to drill down into the first array at index [0] then grab the data we need
       if( !doctorContactDetails.isEmpty() ){
         render(contentType: "text/json"){
           doctorsDetails{
-            //appointment(time: "3pm", date: "Today")
             doctors(doctorContactDetails)
           }
         }

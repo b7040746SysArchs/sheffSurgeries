@@ -173,12 +173,12 @@ class BootStrap {
                 ).save()
 
 
-                nurseLucyPeters.addToDoctors(drBrianDoctor)
-                nurseSusanPeters.addToDoctors(drBrianDoctor)
-                nurseGeorgeTimmins.addToDoctors(drSarahMacdonald)
+                //nurseLucyPeters.addToDoctors(drBrianDoctor)
+                //nurseSusanPeters.addToDoctors(drBrianDoctor)
+                //nurseGeorgeTimmins.addToDoctors(drSarahMacdonald)
 
-                patTomRivers.addToDoctors(drBrianDoctor)
-                patJackReacher.addToDoctors(drSarahMacdonald)
+                //patTomRivers.addToDoctors(drBrianDoctor)
+                //patJackReacher.addToDoctors(drSarahMacdonald)
 
 
     }
