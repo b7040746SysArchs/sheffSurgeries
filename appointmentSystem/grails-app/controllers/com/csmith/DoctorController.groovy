@@ -28,6 +28,7 @@ class DoctorController {
 
     def logout(){
       session.user = null
+      session.doctorEmail = null
       session.userType = null
       redirect(url:'/')
     }

@@ -49,12 +49,15 @@
                 </button>
                 </div>
                 </br><h1 id="taglineHome" style="text-align: center; font-size: 35px">DOCTOR CONTACT DETAILS</h1>
-                <div id="injectAppointments"></div>
+                <div id="injectDoctorInformation"></div>
 
     </section>
 </div>
+
+
+
 <g:javascript>
-  let appointments = document.getElementById("injectAppointments");
+  let appointments = document.getElementById("injectDoctorInformation");
   if(appointments){
     let Url = "http://localhost:8080/doctor/doctorDetailsJSON"
     fetch(Url)
@@ -73,9 +76,11 @@
       console.log(err)
     })
   }
-
-
-
 </g:javascript>
+
+
+
+
+
 </body>
 </html>

@@ -39,6 +39,8 @@ def nextAppointment = {
   in a variable which is placed inside our sql query. We do this to ensure we are using the database which corresponds the
   correct environment
  */
+
+
     String environment;
 
     switch(Environment.current) {
